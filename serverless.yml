@@ -11,11 +11,6 @@ provider:
   iam:
     role:
       statements:
-      - Effect: 'Allow'
-        Action:
-          - 'sqs:SendMessage'
-          - 'sqs:DeleteMessage'
-          - 'sqs:ReceiveMessage'
 
   runtime: nodejs16.x
   profile: ttk

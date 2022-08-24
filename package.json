@@ -1,0 +1,21 @@
+{
+  "name": "serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sls-deploy-hello-word": "sls deploy --stage dev --config serverless.prod.yml",
+    "sls-run-lbar-update-es": "serverless invoke local --stage dev --function helloWord"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankit-bhadja-sf/serverless.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankit-bhadja-sf/serverless/issues"
+  },
+  "homepage": "https://github.com/ankit-bhadja-sf/serverless#readme"
+}

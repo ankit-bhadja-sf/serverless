@@ -1,0 +1,25 @@
+service: serverless-practice
+frameworkVersion: "3"
+
+useDotenv: true
+
+provider:
+  name: aws
+  region: 'us-east-2'
+  memorySize: 256
+  architecture: arm64
+  iam:
+    role:
+      statements:
+      - Effect: 'Allow'
+        Action:
+          - 'sqs:SendMessage'
+          - 'sqs:DeleteMessage'
+          - 'sqs:ReceiveMessage'
+
+  runtime: nodejs16.x
+  profile: ttk
+  timeout: 30
+  logRetentionInDays: 30
+
+functions: ${file(hello-world-functions.yml):functions}

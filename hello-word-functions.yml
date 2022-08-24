@@ -1,0 +1,3 @@
+functions:
+  helloWord:
+    handler: ./helloWord/helloWord.handler
